@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANS WEB - Tu destino para licencias de software y soluciones digitales</title>
+    <meta name="description" content="HANS WEB ofrece licencias de software, herramientas digitales, gestión de códigos y correo temporal. Tu solución completa para productos digitales.">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🌐 HANS WEB</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="tienda.html" class="nav-link">Tienda</a>
+                        <div class="dropdown-menu">
+                            <a href="Tienda/windowsoffice.html" class="dropdown-item">Windows y Office</a>
+                            <a href="Tienda/programas.html" class="dropdown-item">Programas</a>
+                            <a href="Tienda/streaming.html" class="dropdown-item">Streaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gestion-codigos.html" class="nav-link">Gestión de Códigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="correo-temporal.html" class="nav-link">Correo Temporal</a>
+                    </li>
+                </ul>
+                <button class="cart-btn" onclick="toggleCart()" style="display: none;">
+                    🛒 Carrito
+                    <span class="cart-count">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenido a HANS WEB</h1>
+                <p class="hero-subtitle">Tu destino para licencias de software, herramientas digitales y soluciones online</p>
+                <p class="hero-description">
+                    Explora nuestros tres servicios principales: una completa tienda de productos digitales, 
+                    gestión segura de códigos de verificación y generación de correos temporales para proteger tu privacidad.
+                </p>
+                <div class="hero-buttons">
+                    <a href="tienda.html" class="btn btn-primary">Explorar Tienda</a>
+                    <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo Funciona -->
+        <section class="how-it-works">
+            <h2>¿Cómo Funciona HANS WEB?</h2>
+            <p class="section-description">
+                HANS WEB te ofrece una experiencia integral con tres servicios especializados. 
+                Cada uno diseñado para cubrir diferentes necesidades digitales de manera segura y eficiente.
+            </p>
+            
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-icon">🛒</div>
+                    <h3>Tienda</h3>
+                    <p><strong>Explora, selecciona y compra</strong> licencias de software, programas y servicios de streaming. Añade productos al carrito y finaliza tu compra de forma rápida y segura.</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">🔐</div>
+                    <h3>Gestión de Códigos</h3>
+                    <p><strong>Accede de forma segura</strong> a tus códigos de verificación de plataformas de streaming. Mantén organizados todos tus mensajes de acceso en un solo lugar.</p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">📧</div>
+                    <h3>Correo Temporal</h3>
+                    <p><strong>Crea direcciones desechables</strong> para proteger tu privacidad online. Recibe mensajes temporalmente sin comprometer tu correo principal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Principales -->
+        <section id="servicios" class="main-services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="location.href='tienda.html'">
+                    <div class="service-icon">🛍️</div>
+                    <h3>Tienda Digital</h3>
+                    <p>Amplio catálogo de licencias de software, programas especializados y servicios de streaming. Productos originales con garantía y soporte.</p>
+                    <div class="service-keywords">
+                        <span class="keyword">Licencias Windows</span>
+                        <span class="keyword">Microsoft Office</span>
+                        <span class="keyword">Software Premium</span>
+                        <span class="keyword">Streaming Services</span>
+                    </div>
+                    <div class="service-action">
+                        <span>Explorar Tienda →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="location.href='gestion-codigos.html'">
+                    <div class="service-icon">📱</div>
+                    <h3>Gestión de Códigos</h3>
+                    <p>Accede y organiza todos tus códigos de verificación de plataformas como Netflix, Disney+ y Amazon. Gestión centralizada y segura.</p>
+                    <div class="service-keywords">
+                        <span class="keyword">Códigos Netflix</span>
+                        <span class="keyword">Verificación 2FA</span>
+                        <span class="keyword">Gestión Segura</span>
+                        <span class="keyword">Acceso Rápido</span>
+                    </div>
+                    <div class="service-action">
+                        <span>Gestionar Códigos →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="location.href='correo-temporal.html'">
+                    <div class="service-icon">✉️</div>
+                    <h3>Correo Temporal</h3>
+                    <p>Genera direcciones de correo temporales para registros, verificaciones y protección de tu privacidad. Sin límites de uso.</p>
+                    <div class="service-keywords">
+                        <span class="keyword">Privacidad</span>
+                        <span class="keyword">Correos Desechables</span>
+                        <span class="keyword">Sin Registro</span>
+                        <span class="keyword">Uso Ilimitado</span>
+                    </div>
+                    <div class="service-action">
+                        <span>Crear Correo →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Características Adicionales -->
+        <section class="features">
+            <h2>¿Por qué elegir HANS WEB?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Rápido y Eficiente</h3>
+                    <p>Procesos optimizados para una experiencia de usuario fluida y sin complicaciones.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguro y Confiable</h3>
+                    <p>Todas las transacciones y datos están protegidos con los más altos estándares de seguridad.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multiplataforma</h3>
+                    <p>Accede desde cualquier dispositivo: computadora, tablet o smartphone.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Atención personalizada a través de WhatsApp para resolver todas tus dudas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="#">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="https://wa.me/51965485348" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB. Todos los derechos reservados. Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/base.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - HANS WEB</title>
+    <meta name="description" content="Descubre nuestra amplia selección de licencias de software, programas y servicios digitales en HANS WEB.">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/tienda.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🌐 HANS WEB</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="tienda.html" class="nav-link">Tienda</a>
+                        <div class="dropdown-menu">
+                            <a href="Tienda/windowsoffice.html" class="dropdown-item">Windows y Office</a>
+                            <a href="Tienda/programas.html" class="dropdown-item">Programas</a>
+                            <a href="Tienda/streaming.html" class="dropdown-item">Streaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gestion-codigos.html" class="nav-link">Gestión de Códigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="correo-temporal.html" class="nav-link">Correo Temporal</a>
+                    </li>
+                </ul>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Carrito
+                    <span class="cart-count">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Descripción de la Tienda -->
+        <section class="store-intro">
+            <h1>Tienda Digital HANS WEB</h1>
+            <p class="store-description">
+                Descubre nuestra amplia selección de licencias de software, programas especializados y servicios digitales. 
+                Todos nuestros productos son originales y vienen con garantía completa.
+            </p>
+            
+            <div class="how-it-works-store">
+                <h2>¿Cómo Funciona Nuestra Tienda?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p><strong>Navega</strong> por nuestras categorías y encuentra el producto que necesitas</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p><strong>Selecciona</strong> los productos y añádelos a tu carrito de compras</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p><strong>Finaliza</strong> tu compra a través de WhatsApp de forma rápida y segura</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías de la Tienda -->
+        <section class="store-categories">
+            <h2>Categorías de Productos</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="location.href='Tienda/windowsoffice.html'">
+                    <div class="category-icon">💻</div>
+                    <h3>Windows y Office</h3>
+                    <p>Licencias originales de Windows 10, Windows 11, Microsoft Office y paquetes completos de productividad.</p>
+                    <div class="category-keywords">
+                        <span class="keyword">Windows 11 Pro</span>
+                        <span class="keyword">Office 365</span>
+                        <span class="keyword">Licencias Retail</span>
+                        <span class="keyword">Activación Permanente</span>
+                    </div>
+                    <div class="category-action">
+                        <span>Ver Productos →</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="location.href='Tienda/programas.html'">
+                    <div class="category-icon">⚙️</div>
+                    <h3>Programas Especializados</h3>
+                    <p>Software profesional para diseño, antivirus, herramientas de desarrollo y programas especializados.</p>
+                    <div class="category-keywords">
+                        <span class="keyword">Adobe Creative</span>
+                        <span class="keyword">Antivirus Premium</span>
+                        <span class="keyword">Software Profesional</span>
+                        <span class="keyword">Herramientas Dev</span>
+                    </div>
+                    <div class="category-action">
+                        <span>Ver Programas →</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="location.href='Tienda/streaming.html'">
+                    <div class="category-icon">📺</div>
+                    <h3>Servicios de Streaming</h3>
+                    <p>Suscripciones y accesos a las mejores plataformas de streaming y entretenimiento digital.</p>
+                    <div class="category-keywords">
+                        <span class="keyword">Netflix Premium</span>
+                        <span class="keyword">Disney Plus</span>
+                        <span class="keyword">Amazon Prime</span>
+                        <span class="keyword">Spotify Premium</span>
+                    </div>
+                    <div class="category-action">
+                        <span>Ver Streaming →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section class="featured-products">
+            <h2>Productos Destacados</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Los productos se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrito Lateral -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Carro de la Compra</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Tu carrito está vacío</p>
+                <small>Agrega productos para comenzar tu compra</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <strong>Total: S/ <span id="cartTotalAmount">0.00</span></strong>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="window.hansWeb.redirectToWhatsApp()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="#">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="https://wa.me/51965485348" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB. Todos los derechos reservados. Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/base.js"></script>
+    <script src="scripts/tienda.js"></script>
+</body>
+</html>

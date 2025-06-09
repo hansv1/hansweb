@@ -1,0 +1,495 @@
+/* Estilos específicos para gestión de códigos */
+
+/* Introducción */
+.codes-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.codes-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-it-works h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.step-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    background-color: var(--white);
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+.step-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-item p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+/* Sección de plataformas */
+.platforms-section {
+    margin-bottom: 4rem;
+}
+
+.platforms-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.platform-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(11, 98, 106, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.platform-card:hover::before {
+    left: 100%;
+}
+
+.platform-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.platform-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.platform-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.platform-description {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.platform-instruction {
+    margin-bottom: 1.5rem;
+}
+
+.instruction-box {
+    background-color: var(--light-gray);
+    border: 2px dashed #dee2e6;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    line-height: 1.5;
+    position: relative;
+}
+
+.instruction-box::before {
+    content: '💡';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: var(--white);
+    padding: 0 5px;
+    font-size: 1.2rem;
+}
+
+.platform-action {
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.platform-card:hover .platform-action {
+    color: var(--primary-hover);
+    transform: translateX(5px);
+}
+
+/* Información de seguridad */
+.security-info {
+    background-color: var(--light-gray);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.security-info h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.security-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.security-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.security-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--success);
+}
+
+.security-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.security-item p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* FAQ específico */
+.faq-section {
+    margin-bottom: 3rem;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--primary-color);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-item h3::before {
+    content: '🤔';
+    font-size: 1rem;
+}
+
+.faq-item p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Estilos para páginas específicas de plataforma */
+.platform-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.platform-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.platform-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Secciones de entrada */
+.email-input-section,
+.email-active-section,
+.platform-inbox-section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.email-input-section h2,
+.email-active-section h2,
+.platform-inbox-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.email-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: stretch;
+}
+
+.platform-email-input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.platform-email-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(11, 98, 106, 0.1);
+}
+
+.consult-btn {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 150px;
+}
+
+.consult-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.platform-warning {
+    background-color: #e8f4fd;
+    border: 1px solid #b3d9f7;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    color: #2c5aa0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .codes-intro h1,
+    .platform-header h1 {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+    .steps-grid,
+    .platforms-grid,
+    .security-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .platform-card {
+        padding: 1.5rem;
+    }
+    
+    .security-info {
+        padding: 2rem 1rem;
+    }
+    
+    .email-input-group {
+        flex-direction: column;
+    }
+    
+    .consult-btn {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .codes-intro,
+    .platform-header {
+        padding: 1.5rem;
+    }
+    
+    .email-input-section,
+    .email-active-section,
+    .platform-inbox-section {
+        padding: 1.5rem;
+    }
+    
+    .platform-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Animaciones */
+.platform-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.security-item {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.faq-item {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.platform-card:nth-child(1) { animation-delay: 0.1s; }
+.platform-card:nth-child(2) { animation-delay: 0.2s; }
+.platform-card:nth-child(3) { animation-delay: 0.3s; }
+
+.security-item:nth-child(1) { animation-delay: 0.1s; }
+.security-item:nth-child(2) { animation-delay: 0.2s; }
+.security-item:nth-child(3) { animation-delay: 0.3s; }
+.security-item:nth-child(4) { animation-delay: 0.4s; }
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

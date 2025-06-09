@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Códigos - HANS WEB</title>
+    <meta name="description" content="Accede y organiza todos tus códigos de verificación de plataformas como Netflix, Disney+ y Amazon. Gestión centralizada y segura.">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/gestion-codigos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span>🌐 HANS WEB</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="tienda.html" class="nav-link">Tienda</a>
+                        <div class="dropdown-menu">
+                            <a href="Tienda/windowsoffice.html" class="dropdown-item">Windows y Office</a>
+                            <a href="Tienda/programas.html" class="dropdown-item">Programas</a>
+                            <a href="Tienda/streaming.html" class="dropdown-item">Streaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gestion-codigos.html" class="nav-link">Gestión de Códigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="correo-temporal.html" class="nav-link">Correo Temporal</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introducción -->
+        <section class="codes-intro">
+            <h1>🔐 Gestión de Códigos</h1>
+            <p class="intro-description">
+                Accede de forma segura a todos tus códigos de verificación y notificaciones de las principales 
+                plataformas de streaming. Mantén organizados todos tus mensajes de acceso en un solo lugar.
+            </p>
+            
+            <div class="how-it-works">
+                <h2>¿Cómo Funciona?</h2>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Selecciona</h3>
+                        <p>Elige la plataforma que quieres gestionar</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Ingresa</h3>
+                        <p>Proporciona tu correo principal de la plataforma</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Accede</h3>
+                        <p>Ve todos los mensajes y códigos en tiempo real</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plataformas -->
+        <section class="platforms-section">
+            <h2>Selecciona una Plataforma</h2>
+            <div class="platforms-grid">
+                <div class="platform-card" onclick="location.href='Gestion-de-Codigos/Netflix.html'">
+                    <div class="platform-icon">🎬</div>
+                    <h3>Netflix</h3>
+                    <p class="platform-description">
+                        Ver mensajes completos de verificación y notificaciones de Netflix
+                    </p>
+                    <div class="platform-instruction">
+                        <div class="instruction-box">
+                            Ingresa tu correo principal de Netflix para acceder a todos los mensajes
+                        </div>
+                    </div>
+                    <div class="platform-action">
+                        <span>Acceder a Netflix →</span>
+                    </div>
+                </div>
+
+                <div class="platform-card" onclick="location.href='Gestion-de-Codigos/Disney+.html'">
+                    <div class="platform-icon">🏰</div>
+                    <h3>Disney+</h3>
+                    <p class="platform-description">
+                        Ver mensajes completos de verificación y notificaciones de Disney+
+                    </p>
+                    <div class="platform-instruction">
+                        <div class="instruction-box">
+                            Ingresa tu correo principal de Disney+ para acceder a todos los mensajes
+                        </div>
+                    </div>
+                    <div class="platform-action">
+                        <span>Acceder a Disney+ →</span>
+                    </div>
+                </div>
+
+                <div class="platform-card" onclick="location.href='Gestion-de-Codigos/Amazon-otros.html'">
+                    <div class="platform-icon">📦</div>
+                    <h3>Amazon u otros</h3>
+                    <p class="platform-description">
+                        Ver mensajes completos de verificación y notificaciones de Amazon y otras plataformas
+                    </p>
+                    <div class="platform-instruction">
+                        <div class="instruction-box">
+                            Ingresa tu correo principal de Amazon para acceder a todos los mensajes
+                        </div>
+                    </div>
+                    <div class="platform-action">
+                        <span>Acceder a Amazon →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información de seguridad -->
+        <section class="security-info">
+            <h2>🛡️ Seguridad y Privacidad</h2>
+            <div class="security-grid">
+                <div class="security-item">
+                    <div class="security-icon">🔒</div>
+                    <h3>Datos Seguros</h3>
+                    <p>Tu información está protegida con cifrado de extremo a extremo</p>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">👁️</div>
+                    <h3>Solo Lectura</h3>
+                    <p>Solo accedemos a los mensajes, nunca modificamos nada</p>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🔄</div>
+                    <h3>Tiempo Real</h3>
+                    <p>Los códigos aparecen instantáneamente cuando los recibes</p>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🗑️</div>
+                    <h3>Sin Almacenamiento</h3>
+                    <p>No guardamos tus correos, solo los mostramos temporalmente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ específico -->
+        <section class="faq-section">
+            <h2>❓ Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Cómo funciona la gestión de códigos?</h3>
+                    <p>Conectamos de forma segura con tu correo para mostrar solo los mensajes de verificación de las plataformas seleccionadas. Todo en tiempo real y sin almacenar información.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Es seguro ingresar mi correo?</h3>
+                    <p>Completamente seguro. Solo accedemos en modo de lectura a mensajes específicos y utilizamos conexiones cifradas. Nunca almacenamos contraseñas ni datos personales.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué plataformas están soportadas?</h3>
+                    <p>Actualmente soportamos Netflix, Disney+, Amazon Prime y estamos añadiendo más plataformas constantemente según las solicitudes de nuestros usuarios.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Los códigos aparecen instantáneamente?</h3>
+                    <p>Sí, los códigos de verificación aparecen en tiempo real. Nuestro sistema actualiza automáticamente cada 5-15 segundos para mostrarte los mensajes más recientes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="#">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="https://wa.me/51965485348" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB. Todos los derechos reservados. Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/base.js"></script>
+    <script src="scripts/gestion-codigos.js"></script>
+</body>
+</html>

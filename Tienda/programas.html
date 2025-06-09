@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas - HANS WEB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>HANS WEB</h1>
+            </div>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="tienda.html">Tienda <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="windowsoffice.html">Windows y Office</a>
+                        <a href="programas.html">Programas</a>
+                        <a href="streaming.html">Streaming</a>
+                    </div>
+                </div>
+                <a href="gestion-codigos.html">Gestión de Códigos</a>
+                <a href="correo-temporal.html">Correo Temporal</a>
+            </nav>
+            <div class="cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs-container">
+                    <div class="breadcrumb-nav">
+                        <a href="index.html">Inicio</a>
+                        <span>/</span>
+                        <a href="tienda.html">Tienda</a>
+                        <span>/</span>
+                        <span>Programas</span>
+                    </div>
+                    <select class="sort-select">
+                        <option value="default">Orden predeterminado</option>
+                        <option value="price-low-high">Precio: de bajo a alto</option>
+                        <option value="price-high-low">Precio: de alto a bajo</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <h2>Programas Profesionales</h2>
+                <p>Software especializado para diseño, productividad, seguridad y más. Versiones completas y actualizadas.</p>
+                
+                <div class="products-grid">
+                    <!-- Adobe Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="adobe-photoshop.html" class="product-title">Adobe Photoshop 2024</a>
+                            <div class="product-price">S/ 55.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="adobe-illustrator.html" class="product-title">Adobe Illustrator 2024</a>
+                            <div class="product-price">S/ 52.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="adobe-premiere.html" class="product-title">Adobe Premiere Pro 2024</a>
+                            <div class="product-price">S/ 58.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="adobe-creative-cloud.html" class="product-title">Adobe Creative Cloud All Apps</a>
+                            <div class="product-price">S/ 85.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <!-- Antivirus Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="kaspersky-total.html" class="product-title">Kaspersky Total Security</a>
+                            <div class="product-price">S/ 28.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="norton-360.html" class="product-title">Norton 360 Deluxe</a>
+                            <div class="product-price">S/ 32.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="mcafee-total.html" class="product-title">McAfee Total Protection</a>
+                            <div class="product-price">S/ 26.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <!-- Productivity Software -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="adobe-acrobat.html" class="product-title">Adobe Acrobat Pro DC</a>
+                            <div class="product-price">S/ 42.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="guias.html">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/51965485348" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB - Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carro de la Compra</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: S/ <span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

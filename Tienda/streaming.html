@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming - HANS WEB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>HANS WEB</h1>
+            </div>
+            <nav class="nav">
+                <div class="nav-item dropdown">
+                    <a href="tienda.html">Tienda <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="windowsoffice.html">Windows y Office</a>
+                        <a href="programas.html">Programas</a>
+                        <a href="streaming.html">Streaming</a>
+                    </div>
+                </div>
+                <a href="gestion-codigos.html">Gestión de Códigos</a>
+                <a href="correo-temporal.html">Correo Temporal</a>
+            </nav>
+            <div class="cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs-container">
+                    <div class="breadcrumb-nav">
+                        <a href="index.html">Inicio</a>
+                        <span>/</span>
+                        <a href="tienda.html">Tienda</a>
+                        <span>/</span>
+                        <span>Streaming</span>
+                    </div>
+                    <select class="sort-select">
+                        <option value="default">Orden predeterminado</option>
+                        <option value="price-low-high">Precio: de bajo a alto</option>
+                        <option value="price-high-low">Precio: de alto a bajo</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <h2>Servicios de Streaming</h2>
+                <p>Cuentas premium de las mejores plataformas de streaming. Acceso inmediato y calidad garantizada.</p>
+                
+                <div class="products-grid">
+                    <!-- Video Streaming -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-netflix"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="netflix.html" class="product-title">Netflix Premium 1 Mes</a>
+                            <div class="product-price">S/ 12.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="disney-plus.html" class="product-title">Disney+ Premium 1 Mes</a>
+                            <div class="product-price">S/ 10.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="amazon-prime.html" class="product-title">Amazon Prime Video 1 Mes</a>
+                            <div class="product-price">S/ 9.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="hbo-max.html" class="product-title">HBO Max Premium 1 Mes</a>
+                            <div class="product-price">S/ 11.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <!-- Music Streaming -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="spotify.html" class="product-title">Spotify Premium 1 Mes</a>
+                            <div class="product-price">S/ 8.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="youtube-premium.html" class="product-title">YouTube Premium 1 Mes</a>
+                            <div class="product-price">S/ 7.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="apple-music.html" class="product-title">Apple Music Premium 1 Mes</a>
+                            <div class="product-price">S/ 9.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+
+                    <!-- Gaming -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fab fa-xbox"></i>
+                        </div>
+                        <div class="product-info">
+                            <a href="xbox-gamepass.html" class="product-title">Xbox Game Pass Ultimate 1 Mes</a>
+                            <div class="product-price">S/ 15.00</div>
+                            <button class="add-to-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="guias.html">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/51965485348" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB - Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carro de la Compra</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: S/ <span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

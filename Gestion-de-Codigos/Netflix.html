@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Códigos Netflix - HANS WEB</title>
+    <meta name="description" content="Accede a todos tus códigos de verificación y mensajes de Netflix de forma segura y en tiempo real.">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/gestion-codigos.css">
+    <link rel="stylesheet" href="../styles/platform-codes.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span>🌐 HANS WEB</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="../tienda.html" class="nav-link">Tienda</a>
+                        <div class="dropdown-menu">
+                            <a href="../Tienda/windowsoffice.html" class="dropdown-item">Windows y Office</a>
+                            <a href="../Tienda/programas.html" class="dropdown-item">Programas</a>
+                            <a href="../Tienda/streaming.html" class="dropdown-item">Streaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../gestion-codigos.html" class="nav-link">Gestión de Códigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../correo-temporal.html" class="nav-link">Correo Temporal</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Header de Netflix -->
+        <section class="platform-header netflix-header">
+            <h1>🎬 Gestión de Códigos Netflix</h1>
+            <p>
+                Accede a todos tus códigos de verificación y mensajes de Netflix de forma segura. 
+                Ingresa tu correo principal para ver los mensajes en tiempo real.
+            </p>
+        </section>
+
+        <!-- Sección: Correo Principal -->
+        <section class="email-input-section" id="emailInputSection">
+            <h2>Correo Principal</h2>
+            <div class="email-input-group">
+                <input type="email" 
+                       id="platformEmailInput" 
+                       class="platform-email-input" 
+                       placeholder="Ingresa tu correo principal de Netflix"
+                       maxlength="100">
+                <button class="consult-btn" id="consultBtn" onclick="netflixManager.consultEmail()">
+                    🔍 Consultar
+                </button>
+            </div>
+            <div class="platform-warning">
+                <strong>Información:</strong> Ingresa tu correo principal de Netflix para ver todos los mensajes de acceso y comunicaciones de la plataforma. Solo accedemos en modo de lectura y de forma completamente segura.
+            </div>
+        </section>
+
+        <!-- Sección: Tu correo principal está activo -->
+        <section class="email-active-section" id="emailActiveSection" style="display: none;">
+            <h2>Tu correo principal está activo</h2>
+            <div class="email-display-group">
+                <div class="email-display" id="emailDisplay">
+                    ejemplo@correo.com
+                </div>
+                <button class="copy-btn" id="copyBtn" onclick="netflixManager.copyEmail()" title="Copiar correo">
+                    📋
+                </button>
+            </div>
+            <div class="email-status">
+                <div class="status-indicator">
+                    <span class="status-dot active" id="statusDot"></span>
+                    <span class="status-text" id="statusText">Activo - Esperando correos...</span>
+                </div>
+                <div class="email-actions">
+                    <button class="action-btn change-btn" onclick="netflixManager.changeEmail()" title="Cambiar correo">
+                        🔄 Cambiar correo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Bandeja de Entrada -->
+        <section class="platform-inbox-section" id="inboxSection" style="display: none;">
+            <div class="inbox-header">
+                <div class="inbox-title">
+                    <span class="inbox-icon">📬</span>
+                    <h3>Bandeja de Entrada</h3>
+                </div>
+                <div class="inbox-controls">
+                    <button class="control-btn refresh-btn" id="refreshBtn" onclick="netflixManager.refreshInbox()">
+                        🔄 Actualizar
+                    </button>
+                    <select class="refresh-interval" id="refreshInterval" onchange="netflixManager.setRefreshInterval()">
+                        <option value="5000">5 segundos</option>
+                        <option value="15000" selected>15 segundos</option>
+                        <option value="30000">30 segundos</option>
+                        <option value="60000">1 minuto</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="inbox-content" id="inboxContent">
+                <div class="empty-inbox">
+                    <div class="empty-inbox-icon">📮</div>
+                    <h4>No hay correos recibidos aún</h4>
+                    <p>Los nuevos mensajes aparecerán aquí automáticamente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para ver email completo -->
+        <div class="email-modal" id="emailModal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header netflix-modal-header">
+                    <h3 id="modalSubject">Asunto del mensaje</h3>
+                    <button class="modal-close" onclick="netflixManager.closeModal()">&times;</button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Contenido del email -->
+                </div>
+                <div class="modal-footer">
+                    <div class="email-meta" id="modalMeta">
+                        <!-- Metadatos del email -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="../tienda.html">Tienda</a></li>
+                        <li><a href="../gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="../correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="#">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="https://wa.me/51965485348" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB. Todos los derechos reservados. Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/base.js"></script>
+    <script src="../scripts/platform-codes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.netflixManager = new PlatformCodesManager('Netflix');
+        });
+    </script>
+</body>
+</html>
