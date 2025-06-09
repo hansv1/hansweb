@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows y Office - Tienda HANS WEB</title>
+    <meta name="description" content="Licencias originales de Windows 10, Windows 11, Microsoft Office y paquetes completos de productividad.">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/tienda.css">
+    <link rel="stylesheet" href="../styles/subcategoria.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span>🌐 HANS WEB</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="../tienda.html" class="nav-link">Tienda</a>
+                        <div class="dropdown-menu">
+                            <a href="windowsoffice.html" class="dropdown-item">Windows y Office</a>
+                            <a href="programas.html" class="dropdown-item">Programas</a>
+                            <a href="streaming.html" class="dropdown-item">Streaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../gestion-codigos.html" class="nav-link">Gestión de Códigos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../correo-temporal.html" class="nav-link">Correo Temporal</a>
+                    </li>
+                </ul>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Carrito
+                    <span class="cart-count">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs y Ordenamiento -->
+        <div class="breadcrumbs">
+            <nav class="breadcrumb">
+                <span class="breadcrumb-item"><a href="../index.html">Inicio</a></span>
+                <span class="breadcrumb-item"><a href="../tienda.html">Tienda</a></span>
+                <span class="breadcrumb-item active">Windows y Office</span>
+            </nav>
+            <select class="sort-select" id="sortSelect" onchange="sortProducts()">
+                <option value="default">Orden predeterminado</option>
+                <option value="price-low">Precio: de bajo a alto</option>
+                <option value="price-high">Precio: de alto a bajo</option>
+                <option value="name">Nombre A-Z</option>
+            </select>
+        </div>
+
+        <!-- Título de la categoría -->
+        <section class="category-header">
+            <h1>💻 Windows y Office</h1>
+            <p>Licencias originales de Windows y Microsoft Office con activación permanente y soporte completo.</p>
+        </section>
+
+        <!-- Lista de productos -->
+        <section class="products-section">
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrito Lateral -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Carro de la Compra</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Tu carrito está vacío</p>
+                <small>Agrega productos para comenzar tu compra</small>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <strong>Total: S/ <span id="cartTotalAmount">0.00</span></strong>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="subcategoriaManager.redirectToWhatsApp()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="../tienda.html">Tienda</a></li>
+                        <li><a href="../gestion-codigos.html">Gestión de Códigos</a></li>
+                        <li><a href="../correo-temporal.html">Correo Temporal</a></li>
+                        <li><a href="#">Guías</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="https://wa.me/51965485348" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HANS WEB. Todos los derechos reservados. Desarrollado por @romel.jeans</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/base.js"></script>
+    <script src="../scripts/subcategoria.js"></script>
+    <script>
+        // Configuración específica para Windows y Office
+        document.addEventListener('DOMContentLoaded', () => {
+            window.subcategoriaManager = new SubcategoriaManager('windowsoffice');
+        });
+    </script>
+</body>
+</html>

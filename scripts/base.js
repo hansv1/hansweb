@@ -4,16 +4,12 @@ class HansWeb {
         this.cart = JSON.parse(localStorage.getItem('hansWebCart')) || [];
         this.initializeNavigation();
         this.updateCartDisplay();
+        this.initializeMobileMenu();
+        this.handleCartVisibility();
     }
 
     // Inicializar navegación
     initializeNavigation() {
-        // Mobile menu toggle (si se implementa)
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', this.toggleMobileMenu);
-        }
-
         // Smooth scrolling para enlaces internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -27,6 +23,106 @@ class HansWeb {
                 }
             });
         });
+    }
+
+    // Inicializar menú móvil
+    initializeMobileMenu() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-menu-overlay';
+        document.body.appendChild(overlay);
+
+        if (hamburger && nav) {
+            hamburger.addEventListener('click', () => {
+                this.toggleMobileMenu();
+            });
+
+            overlay.addEventListener('click', () => {
+                this.closeMobileMenu();
+            });
+
+            // Manejar dropdowns en móvil
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        }
+
+        // Cerrar menú al redimensionar ventana
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                this.closeMobileMenu();
+            }
+        });
+    }
+
+    // Alternar menú móvil
+    toggleMobileMenu() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Cerrar menú móvil
+    closeMobileMenu() {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Cerrar todos los dropdowns
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+
+    // Manejar visibilidad del carrito según la página
+    handleCartVisibility() {
+        const cartBtn = document.querySelector('.cart-btn');
+        if (!cartBtn) return;
+
+        const currentPage = window.location.pathname;
+        const showCartPages = [
+            '/tienda.html',
+            '/Tienda/',
+            'tienda.html',
+            'windowsoffice.html',
+            'programas.html',
+            'streaming.html',
+            'windows11pro.html'
+        ];
+
+        const shouldShowCart = showCartPages.some(page => 
+            currentPage.includes(page) || 
+            currentPage.includes('Tienda/') ||
+            currentPage.includes('Windows-Office/') ||
+            currentPage.includes('Programas/') ||
+            currentPage.includes('Streaming/')
+        );
+
+        if (shouldShowCart) {
+            cartBtn.classList.add('cart-visible');
+            cartBtn.classList.remove('cart-hidden');
+        } else {
+            cartBtn.classList.add('cart-hidden');
+            cartBtn.classList.remove('cart-visible');
+        }
     }
 
     // Gestión del carrito
@@ -125,7 +221,9 @@ class HansWeb {
         setTimeout(() => {
             notification.style.transform = 'translateX(100%)';
             setTimeout(() => {
-                document.body.removeChild(notification);
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
             }, 300);
         }, 3000);
     }
@@ -203,14 +301,12 @@ class HansWeb {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
+}
 
-    // Toggle mobile menu
-    toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        if (navMenu) {
-            navMenu.classList.toggle('mobile-active');
-        }
-    }
+// Funciones globales para eventos
+function toggleCart() {
+    // Esta función se implementará en cada página específica de la tienda
+    console.log('Abrir carrito');
 }
 
 // Inicializar la aplicación cuando el DOM esté listo

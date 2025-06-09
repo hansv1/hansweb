@@ -1,4 +1,4 @@
-// JavaScript específico para la página de inicio
+// Scripts específicos para la página de inicio
 document.addEventListener('DOMContentLoaded', function() {
     // Animaciones de entrada
     const observerOptions = {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
@@ -14,40 +14,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observar elementos para animaciones
-    document.querySelectorAll('.process-item, .service-card, .feature-item').forEach(el => {
-        observer.observe(el);
+    // Observar secciones para animaciones
+    const sections = document.querySelectorAll('.process-item, .service-card, .feature-item');
+    sections.forEach(section => {
+        observer.observe(section);
     });
 
-    // Efecto de typing en el hero
-    const heroTitle = document.querySelector('.hero-content h1');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        heroTitle.textContent = '';
-        let i = 0;
-        
-        const typeWriter = () => {
-            if (i < originalText.length) {
-                heroTitle.textContent += originalText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
-        setTimeout(typeWriter, 500);
-    }
+    // Scroll suave para botones hero
+    const heroButtons = document.querySelectorAll('.hero-buttons .btn');
+    heroButtons.forEach(button => {
+        if (button.getAttribute('href').startsWith('#')) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+    });
 
-    // Smooth scroll para navegación interna
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    // Efecto hover en las tarjetas de servicio
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-8px)';
         });
     });
 });

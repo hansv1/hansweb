@@ -15,6 +15,7 @@
             <a href="index.html" class="logo">
                 <span>🌐 HANS WEB</span>
             </a>
+            
             <nav class="nav">
                 <ul class="nav-menu">
                     <li class="nav-item dropdown">
@@ -32,11 +33,19 @@
                         <a href="correo-temporal.html" class="nav-link">Correo Temporal</a>
                     </li>
                 </ul>
-                <button class="cart-btn" onclick="toggleCart()" style="display: none;">
+            </nav>
+
+            <div class="mobile-controls">
+                <button class="cart-btn cart-hidden" onclick="toggleCart()">
                     🛒 Carrito
                     <span class="cart-count">0</span>
                 </button>
-            </nav>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
